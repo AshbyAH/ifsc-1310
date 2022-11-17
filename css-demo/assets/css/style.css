@@ -224,10 +224,6 @@ tr:nth-child(even) {
     color: orange;
 }
 
-#demo dl {
-
-}
-
 #demo dt {
     font-weight: bold;
     margin-top: 20px;
