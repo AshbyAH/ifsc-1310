@@ -1,4 +1,4 @@
-/* --------------- Box Sizing --------------- */
+/* --------------------- Box Sizing --------------------- */
 
 html {
     box-sizing: border-box;
@@ -9,10 +9,38 @@ html {
     box-sizing: inherit;
   }
 
-/* --------------- Global Styles --------------- */
+
+
+/* --------------------- Utility Classes --------------------- */
+
+.container {
+    max-width: 960px;
+    width: 80vw;
+    margin: 40px auto;
+}
+
+#demo {
+    max-width: 960px;
+    width: 80vw;
+    margin: 40px auto;
+}
+
+.img-right {
+    float: right;
+    margin: 10px 0 10px 20px;
+    border: 2px dashed #c0c0c0;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+
+
+/* --------------------- Global Styles --------------------- */
 
 body {
     font-family: 'EB Garamond', serif;
+    margin: 0;
+    line-height: 1.35rem;
 }
 
 header.primary {
@@ -21,6 +49,8 @@ header.primary {
     text-shadow: 1.1px 1.1px 3px #000000;
     color: #ffffff;
     padding: 30px;
+    background-color: #f54b39;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='40' viewBox='0 0 50 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23c23b2d' fill-opacity='0.78'%3E%3Cpath d='M40 10L36.67 0h-2.11l3.33 10H20l-2.28 6.84L12.11 0H10l6.67 20H10l-2.28 6.84L2.11 10 5.44 0h-2.1L0 10l6.67 20-3.34 10h2.11l2.28-6.84L10 40h20l2.28-6.84L34.56 40h2.1l-3.33-10H40l2.28-6.84L47.89 40H50l-6.67-20L50 0h-2.1l-5.62 16.84L40 10zm1.23 10l-2.28-6.84L34 28h4.56l2.67-8zm-10.67 8l-2-6h-9.12l2 6h9.12zm-12.84-4.84L12.77 38h15.79l2.67-8H20l-2.28-6.84zM18.77 20H30l2.28 6.84L37.23 12H21.44l-2.67 8zm-7.33 2H16l-4.95 14.84L8.77 30l2.67-8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -64,10 +94,11 @@ header.primary nav {
 }
 
 header.primary nav ul {
-    padding: 0;
+    padding: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items:center;
 }
 
 header.primary nav ul li {
@@ -82,4 +113,217 @@ header.primary ul li a {
     padding: 8px 16px;
     border-radius: 20px;
     border: 1px dashed #75241B;
+}
+
+header.primary ul li a:hover, header.primary ul li a:active {
+    background-color: #8F2C21;
+}
+
+#intro h2 {
+    text-align: center;
+    color: #F54B39;
+    border-bottom: 1px dashed #c0c0c0;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-top: 1px dashed #c0c0c0;
+    border-bottom: 1px dashed #c0c0c0;
+    padding: 2rem 0;
+}
+
+#content article.post {
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0,0,0,.3);
+    padding: 10px;
+    border-radius: 4.5px;
+    font-size: .8rem;
+}
+
+#content article.post:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,.3);
+    font-size: .9rem;
+}
+
+time.post-date, figcaption {
+    text-transform: uppercase;
+    font-size:.85rem;
+    color: #c0c0c0
+}
+
+figcaption {
+    font-size:.65rem
+}
+
+.post figure {
+    margin: 0;
+}
+
+.post figure img {
+    border: 1.5px solid #c0c0c0;
+    padding: 2px;
+    border-radius: 4px
+}
+
+.post a {
+    color: #F54B39;
+}
+
+.post a:hover, .post a:active {
+    text-decoration: none;
+}
+
+#demo h2 {
+    color:#F54B39;
+    border-left: 8px solid #C24C2F;
+    padding: 1px 10px;
+    padding-bottom: 3px;
+    border-bottom: 1px dashed #c0c0c0;
+}
+
+#demo a {
+    color: #C23B2D;
+}
+
+table {
+    border: 2px solid #c0c0c0;
+    background-color: #C24C2F;
+    width: 100%;
+}
+
+th {
+    background-color: #75241B;
+    color: #ffffff;
+    padding: 5px;
+}
+
+td {
+    border: 1px solid #c0c0c0;
+    padding: 3px;
+    color: #ffffff;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #8F2C21;
+}
+
+#demo ol {
+    list-style-type: lower-alpha;
+}
+
+#demo ul ul {
+    list-style-type: square;
+    color: orangered;
+}
+
+#demo ul ul ul {
+    list-style-type: circle;
+    color: orange;
+}
+
+#demo dl {
+
+}
+
+#demo dt {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#demo dd {
+    margin: 0;
+}
+
+#demo blockquote {
+    background-color: #c0c0c0;
+    padding: 20px;
+    border: 5px double darkgray;
+    border-radius: 4px;
+}
+
+#demo cite {
+    display: block;
+    font-size: .7rem;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 15px;
+}
+
+
+
+/* --------------------- Attribute Selector --------------------- */
+
+aside[role = "complementary"] {
+    background-color: #8F2C21;
+    padding: 1.6rem;
+    color: #ffffff
+}
+
+aside[role = "complementary"] header h2 {
+    color: #63AEF2;
+    text-shadow: 1.1px 1.1px 3px #000000;
+}
+
+aside .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+aside article.widget {
+    width: 45%
+}
+
+aside[role = "complementary"] a {
+    color: #B0D5F0;
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+}
+
+aside article footer {
+    display: none;
+}
+
+#colophon {
+    background-color: #C24C2F;
+}
+
+#colophon h6 {
+    color: #ffffff;
+    font-size: .7rem;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+
+
+/* --------------------- Images --------------------- */
+
+img {
+    max-width: 100%;
+}
+
+
+
+/* --------------------- Media Queries --------------------- */
+
+@media screen and (max-width:650px){
+    
+    header.primary nav ul {
+        flex-direction: column;
+    }
+
+    header.primary nav a {
+        display: block;
+    }
+
+    header.primary nav li {
+        margin-bottom: 10px;
+    }
 }
